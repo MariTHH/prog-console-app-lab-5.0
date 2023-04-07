@@ -1,6 +1,38 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <persons>
     <treeSet>
+        <name>ad</name>
+        <coordinates>
+            <x>1</x>
+            <y>1</y>
+        </coordinates>
+        <height>1</height>
+        <eyeColor>RED</eyeColor>
+        <hairColor>RED</hairColor>
+        <nationality>USA</nationality>
+        <location>
+            <x>1.0</x>
+            <y>1.0</y>
+            <name>a</name>
+        </location>
+    </treeSet>
+    <treeSet>
+        <name>aduras</name>
+        <coordinates>
+            <x>2</x>
+            <y>2</y>
+        </coordinates>
+        <height>2</height>
+        <eyeColor>GREEN</eyeColor>
+        <hairColor>GREEN</hairColor>
+        <nationality>SPAIN</nationality>
+        <location>
+            <x>2.0</x>
+            <y>2.0</y>
+            <name>d</name>
+        </location>
+    </treeSet>
+    <treeSet>
         <name>a</name>
         <coordinates>
             <x>2</x>

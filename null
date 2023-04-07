@@ -1,51 +1,35 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <persons>
     <treeSet>
-        <name>a</name>
+        <name>daria</name>
         <coordinates>
-            <x>2</x>
-            <y>2</y>
+            <x>4</x>
+            <y>5</y>
+        </coordinates>
+        <height>1</height>
+        <eyeColor>GREEN</eyeColor>
+        <hairColor>RED</hairColor>
+        <nationality>SPAIN</nationality>
+        <location>
+            <x>6.0</x>
+            <y>7.0</y>
+            <name>dk</name>
+        </location>
+    </treeSet>
+    <treeSet>
+        <name>maria</name>
+        <coordinates>
+            <x>3</x>
+            <y>1</y>
         </coordinates>
         <height>2</height>
         <eyeColor>RED</eyeColor>
         <hairColor>RED</hairColor>
-        <nationality>SPAIN</nationality>
-        <location>
-            <x>2.0</x>
-            <y>2.0</y>
-            <name>a</name>
-        </location>
-    </treeSet>
-    <treeSet>
-        <name>a</name>
-        <coordinates>
-            <x>2</x>
-            <y>2</y>
-        </coordinates>
-        <height>54</height>
-        <eyeColor>GREEN</eyeColor>
-        <hairColor>RED</hairColor>
-        <nationality>CHINA</nationality>
-        <location>
-            <x>2.0</x>
-            <y>2.0</y>
-            <name>a</name>
-        </location>
-    </treeSet>
-    <treeSet>
-        <name>artem</name>
-        <coordinates>
-            <x>2</x>
-            <y>25</y>
-        </coordinates>
-        <height>56</height>
-        <eyeColor>BLUE</eyeColor>
-        <hairColor>GREEN</hairColor>
         <nationality>USA</nationality>
         <location>
-            <x>2.0</x>
-            <y>3.0</y>
-            <name>africa</name>
+            <x>1.0</x>
+            <y>2.0</y>
+            <name>d</name>
         </location>
     </treeSet>
 </persons>

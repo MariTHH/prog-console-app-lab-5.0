@@ -183,7 +183,6 @@ public class PersonCollection {
             }
         }
     }
-
     /**
      * removes the highest person
      *
@@ -259,19 +258,23 @@ public class PersonCollection {
      * print information about available commands
      */
     public static void help() {
-        System.out.println("add {element} : добавить новый элемент в коллекцию \n" +
-                "add_if_max {element} : добавить новый элемент в коллекцию, если его значение превышает значение наибольшего элемента этой коллекции \n" +
-                "add_if_min {element} : добавить новый элемент в коллекцию, если его значение меньше, чем у наименьшего элемента этой коллекции \n" +
-                "clear : очистить коллекцию \n" +
-                "count_greater_than_eye_color eyeColor : вывести количество элементов, значение поля eyeColor которых больше заданного \n" +
-                "filter_greater_than_location location : вывести элементы, значение поля location которых больше заданного \n" +
-                "help : вывести справку по доступным командам \n" +
-                "info : вывести в стандартный поток вывода информацию о коллекции (тип, дата инициализации, количество элементов) \n" +
-                "print_unique_location : вывести уникальные значения поля location всех элементов в коллекции \n" +
-                "remove_by_id id : удалить элемент из коллекции по его id \n" +
-                "remove_greater {element} : удалить из коллекции все элементы, превышающие заданный \n" +
-                "show : вывести в стандартный поток вывода все элементы коллекции в строковом представлении \n" +
-                "update id {element} : обновить значение элемента коллекции, id которого равен заданному"
+
+        System.out.println("""
+                add {element} : добавить новый элемент в коллекцию\s
+                add_if_max {element} : добавить новый элемент в коллекцию, если его значение превышает значение наибольшего элемента этой коллекции\s
+                add_if_min {element} : добавить новый элемент в коллекцию, если его значение меньше, чем у наименьшего элемента этой коллекции\s
+                clear : очистить коллекцию\s
+                count_greater_than_eye_color eyeColor : вывести количество элементов, значение поля eyeColor которых больше заданного\s
+                filter_greater_than_location location : вывести элементы, значение поля location которых больше заданного\s
+                save : сохранить коллекцию в файл\s
+                execute_script file_name : считать и исполнить скрипт из указанного файла. В скрипте содержатся команды в таком же виде, в котором их вводит пользователь в интерактивном режиме.
+                help : вывести справку по доступным командам\s
+                info : вывести в стандартный поток вывода информацию о коллекции (тип, дата инициализации, количество элементов)\s
+                print_unique_location : вывести уникальные значения поля location всех элементов в коллекции\s
+                remove_by_id id : удалить элемент из коллекции по его id\s
+                remove_greater {element} : удалить из коллекции все элементы, превышающие заданный\s
+                show : вывести в стандартный поток вывода все элементы коллекции в строковом представлении\s
+                update id {element} : обновить значение элемента коллекции, id которого равен заданному"""
         );
     }
 
@@ -307,9 +310,9 @@ public class PersonCollection {
             Parser.convertToXML(this, sc);
         } catch (FileNotFoundException e) {
             System.out.println("Файл для сохранения не найден");
-        } catch (NullPointerException e){
+        } catch (NullPointerException e) {
             System.out.println("Сохранит в текущий файл");
-            Parser.convertToXML(this,file);
+            Parser.convertToXML(this, file);
         }
     }
 

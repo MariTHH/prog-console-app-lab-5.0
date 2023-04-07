@@ -1,35 +1,35 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <persons>
     <treeSet>
-        <name>a</name>
+        <name>adur</name>
         <coordinates>
-            <x>2</x>
-            <y>2</y>
+            <x>1</x>
+            <y>1</y>
         </coordinates>
-        <height>54</height>
-        <eyeColor>GREEN</eyeColor>
+        <height>1</height>
+        <eyeColor>RED</eyeColor>
         <hairColor>RED</hairColor>
-        <nationality>CHINA</nationality>
+        <nationality>USA</nationality>
         <location>
-            <x>2.0</x>
-            <y>2.0</y>
+            <x>1.0</x>
+            <y>1.0</y>
             <name>a</name>
         </location>
     </treeSet>
     <treeSet>
-        <name>artem</name>
+        <name>aduras</name>
         <coordinates>
             <x>2</x>
-            <y>25</y>
+            <y>2</y>
         </coordinates>
-        <height>56</height>
-        <eyeColor>BLUE</eyeColor>
+        <height>2</height>
+        <eyeColor>GREEN</eyeColor>
         <hairColor>GREEN</hairColor>
-        <nationality>USA</nationality>
+        <nationality>SPAIN</nationality>
         <location>
             <x>2.0</x>
-            <y>3.0</y>
-            <name>africa</name>
+            <y>2.0</y>
+            <name>d</name>
         </location>
     </treeSet>
 </persons>
