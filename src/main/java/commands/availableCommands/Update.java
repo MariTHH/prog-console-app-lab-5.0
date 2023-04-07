@@ -39,5 +39,20 @@ public class Update extends Command {
             System.out.println("ID введен неверно");
         }
     }
+    public boolean updateForScript(String id_s) {
+        try {
+            int ID = Integer.parseInt(id_s);
+            if (personCollection.existID(ID)) {
+                System.out.println("Персонаж обновлен");
+                return true;
+            } else {
+                System.out.println("Человека с таким ID не существует");
+                return false;
+            }
+        } catch (NumberFormatException e) {
+            System.out.println("ID введен неверно");
+            return false;
+        }
+    }
 }
 
