@@ -103,6 +103,23 @@ public class PersonCollection {
             System.out.println("Персонаж не ниже всех");
         }
     }
+    public boolean addIfMinForScript(String sc) {
+        String height_s = sc.trim();
+        int height_int = Integer.parseInt(height_s);
+        boolean flag = false;
+        for (Person person1 : treeSet) {
+            flag = height_int < person1.getHeight();
+
+        }
+        if (flag) {
+            System.out.println("Самый низкий персонаж добавлен");
+            return true;
+        } else {
+            System.out.println("Персонаж не ниже всех");
+            return false;
+        }
+    }
+
 
 
     /**
@@ -126,6 +143,22 @@ public class PersonCollection {
             System.out.println("Самый высокий персонаж добавлен");
         } else {
             System.out.println("Персонаж не выше всех");
+        }
+    }
+    public boolean addIfMaxForScript(String sc) {
+        String height_s = sc.trim();
+        int height_int = Integer.parseInt(height_s);
+        boolean flag = false;
+        for (Person person1 : treeSet) {
+            flag = height_int > person1.getHeight();
+
+        }
+        if (flag) {
+            System.out.println("Самый высокий персонаж добавлен");
+            return true;
+        } else {
+            System.out.println("Персонаж не выше всех");
+            return false;
         }
     }
 
