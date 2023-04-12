@@ -1,9 +1,9 @@
 package commands.availableCommands;
 
+import client.ClientManager;
 import collection.PersonCollection;
 import commands.Command;
 
-import java.util.Scanner;
 
 /**
  * add_if_max {element}
@@ -23,7 +23,12 @@ public class AddIfMax extends Command {
     @Override
     public void execute(String[] args) {
         try {
-            if (args.length > 2) {
+            if (ExecuteScript.getFlag()) {
+                if (personCollection.addIfMaxForScript(args[1])) {
+                    ExecuteScript.getPersonList().set(6, args[1]);
+                    personCollection.addPerson(ClientManager.createPersonFromScript(ExecuteScript.getPersonList()));
+                }
+            } else if (args.length != 2) {
                 System.out.println("Вы неправильно ввели команду");
             } else {
                 personCollection.addIfMax(args[1]);

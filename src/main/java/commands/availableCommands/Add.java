@@ -29,7 +29,9 @@ public class Add extends Command {
      */
     @Override
     public void execute(String[] args) throws FileNotFoundException {
-        if (args.length > 1) {
+        if (ExecuteScript.getFlag()) {
+            personCollection.addPerson(ClientManager.createPersonFromScript(ExecuteScript.getPersonList()));
+        } else if (args.length > 1) {
             System.out.println("Вы неправильно ввели команду");
         } else {
             Scanner sc = new Scanner(System.in);

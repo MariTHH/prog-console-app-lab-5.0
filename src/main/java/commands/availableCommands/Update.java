@@ -13,12 +13,15 @@ import java.util.Scanner;
 public class Update extends Command {
     private final PersonCollection personCollection;
 
-    public Update (PersonCollection personCollection) {
+    public Update(PersonCollection personCollection) {
         this.personCollection = personCollection;
     }
+
     @Override
     public void execute(String[] args) {
-        if (args.length != 2) {
+        if (ExecuteScript.getFlag()) {
+            updateForScript();
+        } else if (args.length != 2) {
             System.out.println("Вы неправильно ввели команду");
         } else {
             Scanner sc = new Scanner(System.in);
@@ -39,19 +42,20 @@ public class Update extends Command {
             System.out.println("ID введен неверно");
         }
     }
-    public boolean updateForScript(String id_s) {
+
+    public void updateForScript() {
         try {
-            int ID = Integer.parseInt(id_s);
-            if (personCollection.existID(ID)) {
+            System.out.println("Введите ID для команды update");
+            Scanner scanner = new Scanner(System.in);
+            int line = Integer.parseInt(scanner.nextLine().trim());
+            if (personCollection.existID(line)) {
                 System.out.println("Персонаж обновлен");
-                return true;
+                personCollection.updateElement(ClientManager.createPersonFromScript(ExecuteScript.getPersonList()), line);
             } else {
                 System.out.println("Человека с таким ID не существует");
-                return false;
             }
-        } catch (NumberFormatException e) {
-            System.out.println("ID введен неверно");
-            return false;
+        } catch (IllegalArgumentException e) {
+            System.out.println("jd");
         }
     }
 }
