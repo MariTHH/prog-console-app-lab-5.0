@@ -115,9 +115,10 @@ public class ExecuteScript extends Command {
                         }
                         i += 10;
                     }
-                } catch (NullPointerException e) {
+                } catch (NullPointerException | IndexOutOfBoundsException e) {
                     System.out.println("Неверные данные в скрипте, персонаж не создан");
                 }
+
             }
             /*for (String command : commandList) {
                 while (command.contains("  "))
